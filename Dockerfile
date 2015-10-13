@@ -1,15 +1,13 @@
-FROM debian:sid
+FROM alpine:latest
 MAINTAINER dochang@gmail.com
 
-RUN apt-get update && \
-    apt-get --yes install --no-install-recommends privoxy && \
-    mkdir -p /usr/local/share && \
-    chown root:staff /usr/local/share && \
-    tar c -f - -C /etc privoxy | tar x -f - -C /usr/local/share && \
-    chown -R root:staff /usr/local/share/privoxy && \
-    chown root:root /var/log/privoxy /etc/privoxy && \
+RUN apk add --update-cache privoxy && \
+    chown -R root:root /var/log/privoxy /etc/privoxy && \
     chmod 0700 /var/log/privoxy && \
-    rm -rf /var/lib/apt/lists/*
+    mkdir -p /usr/local/share && \
+    chown root:root /usr/local/share && \
+    tar --create --file - --directory /etc privoxy | tar --extract --file - --directory /usr/local/share && \
+    rm -rf /var/cache/apk/*
 
 VOLUME ["/etc/privoxy", "/var/log/privoxy"]
 EXPOSE 8118
