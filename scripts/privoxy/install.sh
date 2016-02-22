@@ -2,7 +2,7 @@
 
 set -ex
 
-apk add --update-cache privoxy
+apk add --no-cache privoxy
 
 chown -R root:root /var/log/privoxy /etc/privoxy
 
