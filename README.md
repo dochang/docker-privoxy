@@ -3,7 +3,8 @@ docker-privoxy
 
 [![Docker Stars](https://img.shields.io/docker/stars/dochang/privoxy.svg)](https://hub.docker.com/r/dochang/privoxy/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/dochang/privoxy.svg)](https://hub.docker.com/r/dochang/privoxy/)
-[![](https://badge.imagelayers.io/dochang/privoxy:latest.svg)](https://imagelayers.io/?images=dochang/privoxy:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/dochang/privoxy:latest.svg)](http://microbadger.com/images/dochang/privoxy:latest "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/dochang/privoxy:latest.svg)](http://microbadger.com/images/dochang/privoxy:latest "Get your own version badge on microbadger.com")
 
 build
 -----
